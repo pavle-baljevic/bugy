@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bugy</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/favicon.png">
+
+    <style>
+        .intro {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        .intro img {
+            width: 100%;
+        }
+        .intro h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>Welcome to Bugy!</h1>
+            <p>minimalist buck tracker</p>
+            <img src="./images/intro.gif" alt="bugy">
+        </div>
+        <div class="flex-row">
+            <div class="flex-small one-third">
+                <form>
+                    <label for="summary">summary</label>
+                    <input type="text" id="summary" placeholder="enter short bug description..">
+                    <label for="status">status</label>
+                    <select id="status">
+                        <option value="option-new">NEW</option>
+                        <option value="option-in_progress">IN PROGRESS</option>
+                        <option value="option-done">DONE</option>
+                    </select>
+                    <label for="description">description</label>
+                    <textarea id="description" placeholder="enter steps to reproduce.."></textarea>
+                    <input type="submit" onclick="add()" value="Add new bug">
+                </form>
+            </div>
+            <div class="flex-large two-thirds">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>summary</th>
+                            <th>status</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>app crash</td>
+                            <td>IN PROGRESS</td>
+                            <td>1. Login 2. Go to overview 3. Click on add new item</td>
+                        </tr>
+                        <tr>
+                            <td>can't login</td>
+                            <td>DONE</td>
+                            <td>Can't login with admin/admin credentials</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer>
+            <blockquote>
+                <p>developed for fun and with &hearts; by Pavle </p>
+            </blockquote>
+        </footer>
+    </div>
+    <script>
+        function add() {
+            alert("You've just added a bug!")
+        }
+    </script>
+</body>
+
+</html>
